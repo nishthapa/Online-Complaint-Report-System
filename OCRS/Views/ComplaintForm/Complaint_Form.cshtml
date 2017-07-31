@@ -27,12 +27,12 @@
             <div class="col-md-10">
                 @Html.DropDownListFor(model => model.DEPARTMENT, new List<SelectListItem> {
 
-               new SelectListItem { Text="FOOD AND SUPPLY",Value="Food and Supply"},
-               new SelectListItem { Text="INFORMATION TECHNOLOGY ",Value="Information Technology"},
-               new SelectListItem { Text="HOME",Value="Home Department"},
-               new SelectListItem { Text="HEALTH",Value="Health Department"},
-               new SelectListItem { Text="URBAN DEVELOPMENT AND HOUSING",Value="Urban Development and Housing"},
-               new SelectListItem { Text="FOREST",Value="Forest"}},
+               new SelectListItem { Text="FOOD AND SUPPLY",Value="FOOD AND SUPPLY"},
+               new SelectListItem { Text="INFORMATION TECHNOLOGY ",Value="INFORMATION TECHNOLOGY"},
+               new SelectListItem { Text="HOME",Value="HOME"},
+               new SelectListItem { Text="HEALTH",Value="HEALTH"},
+               new SelectListItem { Text="URBAN DEVELOPMENT AND HOUSING",Value="URBAN DEVELOPMENT AND HOUSING"},
+               new SelectListItem { Text="FOREST",Value="FOREST"}},
                "SELECT DEPARTMENT", new { @class = "form-control input-textbox" })
                @Html.ValidationMessageFor(model => model.DEPARTMENT, "", new { @class = "text-danger input-textbox" })
             </div>
