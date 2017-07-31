@@ -11,13 +11,18 @@ namespace OCRS
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Complaint_TB
     {
         public int ID { get; set; }
+        [Required]
         public string NAME { get; set; }
+        [Required]
         public string DEPARTMENT { get; set; }
+        [Required]
         public Nullable<System.DateTime> DATE { get; set; }
+        [Required]
         public string COMPLAINT { get; set; }
     }
 }

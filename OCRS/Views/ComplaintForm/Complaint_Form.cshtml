@@ -4,7 +4,7 @@
     ViewBag.Title = "COMPLAINT FORM";
 }
 
-<h2>Complaint_Form</h2>
+<h2>COMPLAINT FORM</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,6 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Complaint_TB</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -26,8 +25,16 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DEPARTMENT, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DEPARTMENT, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DEPARTMENT, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.DEPARTMENT, new List<SelectListItem> {
+
+               new SelectListItem { Text="FOOD AND SUPPLY",Value="Food and Supply"},
+               new SelectListItem { Text="INFORMATION TECHNOLOGY ",Value="Information Technology"},
+               new SelectListItem { Text="HOME",Value="Home Department"},
+               new SelectListItem { Text="HEALTH",Value="Health Department"},
+               new SelectListItem { Text="URBAN DEVELOPMENT AND HOUSING",Value="Urban Development and Housing"},
+               new SelectListItem { Text="FOREST",Value="Forest"}},
+               "SELECT DEPARTMENT", new { @class = "form-control input-textbox" })
+               @Html.ValidationMessageFor(model => model.DEPARTMENT, "", new { @class = "text-danger input-textbox" })
             </div>
         </div>
 
