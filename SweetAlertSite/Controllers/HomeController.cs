@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SweetAlertSite.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +9,34 @@ namespace SweetAlertSite.Controllers
 {
     public class HomeController : Controller
     {
+        //  
+        // GET: /Home/  
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View(new OrderFood());
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public ActionResult Create(OrderFood OrderFood)
         {
-            ViewBag.Message = "Your contact page.";
+            if (ModelState.IsValid)
+            {
 
-            return View();
+            }
+            else
+            {
+
+            }
+            return View(OrderFood);
         }
+
     }
 }

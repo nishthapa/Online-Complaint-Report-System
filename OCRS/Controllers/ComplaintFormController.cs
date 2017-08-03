@@ -28,9 +28,14 @@ namespace OCRS.Controllers
                     ModelState.Clear();
                     U = null;
                     ViewBag.Message = "Complaint Successfully Lodged";
+                    return RedirectToAction("viewdata");
                 }
             }
-            return View(U);
+            return View();
+        } 
+        public ActionResult viewdata()
+        {
+            return View();
         }
     }
 }
