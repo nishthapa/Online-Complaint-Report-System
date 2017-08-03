@@ -27,7 +27,7 @@ namespace OCRS.Controllers
                     dc.SaveChanges();
                     ModelState.Clear();
                     U = null;
-                    ViewBag.Message = "Successfully Registration Done";
+                    ViewBag.Message = "Complaint Successfully Lodged";
                 }
             }
             return View(U);
